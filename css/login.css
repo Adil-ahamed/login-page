@@ -1,0 +1,238 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+section .imgBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .imgBox::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, #e91e63,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contentBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+section .contentBox .formBox{
+    width: 50%;
+}
+.formBox h2{
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.formBox .inputBox{
+    margin-bottom: 20px;
+}
+.formBox .inputBox span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-weight: 300;
+}
+.formBox .inputBox input{
+    width: 100%;
+    padding: 10px 20px ;
+    outline: none;
+    border:1px solid #607d8b;
+    color: #607d8b;
+    font-size: 20px;
+    background: transparent;
+    border-radius: 30px;
+}
+.formBox .inputBox input[type="submit" ]{
+    cursor: pointer;
+    background: #ff4584;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+.formBox .inputBox input[type="submit" ]:hover{
+    background: #c03261;
+}
+.remember{
+    margin-bottom: 10px;
+    color: #607d8b;
+}
+.addons{
+    text-align: center;
+    color: #607d8b;
+}
+.addons a{
+    text-decoration: none;
+    color: #ff4584;
+}
+.addons a:hover{
+    text-decoration: underline;
+
+}
+.login_with p{
+    text-align: center;
+    color: #607d8b;
+}
+.socialIcons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.facebook , .twiter , .instagram{
+    margin-right: 20px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    width: 45pxb;
+}
+.facebook:hover{
+    transform: translateY(-10px);
+}
+.twiter:hover{
+    transform: translateY(-10px);
+}
+.instagram:hover{
+    transform: translateY(-10px);
+}
+
+
+
+
+
+/*Responsive Section*/
+
+
+
+
+@media(max-width:768px){
+    section .imgBox {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    section .contentBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    section .contentBox .formBox {
+    width: 75%;
+    padding: 40px;
+    background-color: #ffffffa6;
+    margin: 50px;
+    }
+    .formBox .inputBox {
+        margin-bottom: 5px;
+    }
+    
+
+
+
+
+}
+@media(max-width:420px){
+    section .imgBox {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    section .contentBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .formBox h2{
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #ff4584;
+    }
+
+    section .contentBox .formBox {
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffffa6;
+    margin: 0px;
+    }
+    .formBox .inputBox {
+        margin-bottom: 5px;
+    }
+    .formBox .inputBox input {
+        padding:5px 20px;
+
+    }
+    p{
+        font-size: 13px;
+    }
+
+}
+@media(max-width:290px){
+    p{
+        font-size: 10px;
+    }
+    a{
+        font-size: 10px;
+
+    }
+    h2{
+        font-size: 13px;
+    }
+    span{
+        font-size: 13px;
+    }
+    input{
+        width: 50%;
+    }
+    .remember{
+        font-size: 13px;
+    }
+    .formBox .inputBox input {
+        width: 90%;
+    }
+}
